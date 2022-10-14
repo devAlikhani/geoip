@@ -13,7 +13,16 @@
       "type": "cutter",
       "action": "remove",
       "args": {
-        "wantedList": ["cn"],
+        "wantedList": ["cn","ir"],
+        "onlyIPType": "ipv4"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "ir",
+        "uri": "https://raw.githubusercontent.com/devAlikhani/dnsmasq-ir-list/main/ir-ip-list.txt",
         "onlyIPType": "ipv4"
       }
     },
@@ -85,6 +94,7 @@
       "args": {
         "outputName": "Country.mmdb",
         "overwriteList": [
+          "ir",
           "cn",
           "private",
           "cloudflare",
